@@ -29,6 +29,13 @@ class ManageStore extends SettingsPage
                             ->label('Store Address')
                             ->default(fn () => $settings->store_address)
                             ->required(),
+                        Forms\Components\Radio::make('paper_size')
+                            ->label('Paper Size')
+                            ->options([
+                                '80mm' => '80mm',
+                                '58mm' => '58mm',
+                            ])
+                            ->required(),
                     ]),
             ]);
     }
